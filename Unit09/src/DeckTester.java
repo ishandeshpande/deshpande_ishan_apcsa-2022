@@ -13,7 +13,6 @@ public class DeckTester {
 		for (int i = 0; i < deckk.size(); i++) {
 			deckk.deal();
 		}
-		deckk.shuffle();
 		System.out.println(deckk);
 	}
 }
