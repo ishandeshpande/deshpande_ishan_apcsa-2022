@@ -40,8 +40,8 @@ public class Deck {
 	public void shuffle() {
 		size = cards.size();
 
-		for (int i = cards.size() - 1; i > 0; i--) {
-			int r = (int) Math.random()*i;
+		for (int i = size - 1; i > 0; i--) {
+			int r = (int)((i+1) * Math.random());
 			Card z = cards.get(r);
 			cards.set(r, cards.get(i));
 			cards.set(i, z);
