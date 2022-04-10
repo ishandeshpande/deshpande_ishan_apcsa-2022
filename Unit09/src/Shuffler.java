@@ -55,12 +55,12 @@ public class Shuffler {
 
 	public static void selectionShuffle(int[] values) {
 		
-		int r, k;
+		int r, temp;
 		for (int i = values.length - 1; i >= 0; i--) {
 			r = (int) Math.random()*i;
-			k = values[i];
+			temp = values[i];
 			values[i] = values[r];
-			values[r] = k;
+			values[r] = temp;
 		}
 	}
 }
