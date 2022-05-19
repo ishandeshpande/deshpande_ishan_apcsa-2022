@@ -25,6 +25,14 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testKeepOnlyRed()
+  {
+    Picture beach = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/beach.jpg");
+    beach.explore();
+    beach.keepOnlyRed();
+    beach.explore();
+  }
+  
   public static void testNegate()
   {
     Picture beach = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/beach.jpg");
@@ -140,30 +148,28 @@ public class PictureTester
     * method in Java */
   public static void main(String[] args)
   {
-	  testEdgeDetection();
-//	  testMirrorTemple();
-//	  testMirrorDiagonal();
-//	  testKeepOnlyBlue();
-//    testZeroBlue();
-    //testKeepOnlyBlue();
-    //testKeepOnlyRed();
-    //testKeepOnlyGreen();
-    //testGrayscale();
-    //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
-    //testMirrorDiagonal();
-    //testCollage();
-    //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
-    //testChromakey();
-    //testEncodeAndDecode();
-    //testGetCountRedOverValue(250);
-    //testSetRedToHalfValueInTopHalf();
-    //testClearBlueOverValue(200);
-    //testGetAverageForColumn(0);
+	  
+//	  	//testZeroBlue();
+//	    testKeepOnlyBlue();
+////	    testKeepOnlyRed();
+//	    //testKeepOnlyGreen();
+//	    //testNegate();
+//	    //testGrayscale();
+//	    //testFixUnderwater();
+//	    testMirrorVertical();
+//	    //testMirrorTemple();
+//	    //testMirrorArms();
+//	    //testMirrorGull();
+//	    //testMirrorDiagonal();
+//	    //testCollage();
+//	    //testCopy();
+//	    testEdgeDetection();
+//	    //testEdgeDetection2();
+//	    //testChromakey();
+//	    //testEncodeAndDecode();
+//	    //testGetCountRedOverValue(250);
+//	    //testSetRedToHalfValueInTopHalf();
+//	    //testClearBlueOverValue(200);
+//	    //testGetAverageForColumn(0);
   }
 }

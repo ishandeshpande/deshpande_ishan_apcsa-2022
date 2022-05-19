@@ -391,7 +391,7 @@ public class Picture extends SimplePicture
     this.copy(flower1,400,0);
     this.copy(flower2,500,0);
     this.mirrorVertical();
-    this.write("collage.jpg");
+//    this.write("collage.jpg");
   }
   
   public void myCollage()
@@ -435,8 +435,7 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/beach.jpg");
-
+  
   }
   
 } // this } is the end of class Picture, put all new methods before this
