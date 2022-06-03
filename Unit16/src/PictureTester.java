@@ -9,7 +9,19 @@
 public class PictureTester
 {
   /** Method to test zeroBlue */
-  public static void testZeroBlue()
+
+	public static void testEncoder()
+	  {
+	    Picture beach = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/beach.jpg");
+
+	    beach.explore();
+	    beach.encode();
+	    beach.explore();
+	    beach.decode();
+	    beach.explore();
+	  }
+	
+	public static void testZeroBlue()
   {
     Picture beach = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/beach.jpg");
     beach.explore();
@@ -22,14 +34,6 @@ public class PictureTester
     Picture beach = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/beach.jpg");
     beach.explore();
     beach.keepOnlyBlue();
-    beach.explore();
-  }
-  
-  public static void testKeepOnlyRed()
-  {
-    Picture beach = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/beach.jpg");
-    beach.explore();
-    beach.keepOnlyRed();
     beach.explore();
   }
   
@@ -148,7 +152,7 @@ public class PictureTester
     * method in Java */
   public static void main(String[] args)
   {
-	  
+	  testEncoder();
 //	  	//testZeroBlue();
 //	    testKeepOnlyBlue();
 ////	    testKeepOnlyRed();

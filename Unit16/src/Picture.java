@@ -394,6 +394,65 @@ public class Picture extends SimplePicture
 //    this.write("collage.jpg");
   }
   
+  public void encode()
+  {
+//    Picture message = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/msg.jpeg");
+    Picture message = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/apple_icon.jpeg");
+
+
+    Pixel[][] base = this.getPixels2D();
+    Pixel[][] hidden = message.getPixels2D();
+    
+    for (int i = 0; i < base.length; i++) {
+    	for (int k = 0; k < base[0].length; k++) {
+    		if (!(base[i][k].getRed() % 2 == 0)) {
+    			base[i][k].setRed(base[i][k].getRed()+1);
+    		}
+    		if (!(base[i][k].getGreen() % 2 == 0)) {
+    			base[i][k].setGreen(base[i][k].getGreen()+1);
+    		}
+    		if (!(base[i][k].getBlue() % 2 == 0)) {
+    			base[i][k].setBlue(base[i][k].getBlue()+1);
+    		}
+    		
+    	}
+    }
+    
+    for (int i = 0; i < base.length; i++) {
+    	for (int k = 0; k < base[0].length; k++) {
+	    	if (hidden[i][k].getBlue() < 20 && hidden[i][k].getGreen() < 20 && hidden[i][k].getRed() < 20) {
+				int selector = (int) (Math.random() * 3) + 1;
+				if (selector == 1) base[i][k].setRed(base[i][k].getRed() + 1);
+				if (selector == 2) base[i][k].setGreen(base[i][k].getGreen() + 1);
+				if (selector == 3) base[i][k].setBlue(base[i][k].getBlue() + 1);
+	    	}
+    	}
+    }
+    
+  }
+  
+  public void decode()
+  {
+    Pixel[][] base = this.getPixels2D();
+    
+    for (int i = 0; i < base.length; i++) {
+    	for (int k = 0; k < base[0].length; k++) {
+    		if ((base[i][k].getRed() % 2 == 0) && (base[i][k].getGreen() % 2 == 0) && (base[i][k].getBlue() % 2 == 0)) {
+    			base[i][k].setRed(0);
+    			base[i][k].setGreen(0);
+    			base[i][k].setBlue(0);
+    		}
+    		else {
+    			base[i][k].setRed(255);
+    			base[i][k].setGreen(255);
+    			base[i][k].setBlue(255);
+    		}
+    		
+    	}
+    }
+    
+  }
+  
   public void myCollage()
   {
       Picture flower1 = new Picture("/Users/ishandeshpande/Documents/GitHub/deshpande_ishan_apcsa-2022/Unit16/src/images/flower1.jpg");
